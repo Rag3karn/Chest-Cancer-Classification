@@ -1,9 +1,9 @@
 import os
 import zipfile
 import gdown
-from cnnClassifier import logger
-from cnnClassifier.utils.common import get_size
-from cnnClassifier.entity.config_entity import DataIngestionConfig
+from Project import logger
+from Project.utils.common import get_size
+from Project.entity.config_entity import DataIngestionConfig
 
 
 class DataIngestion:

@@ -1,13 +1,13 @@
 schema: '2.0'
 stages:
   data_ingestion:
-    cmd: python src/cnnClassifier/pipeline/stage_01_data_ingestion.py
+    cmd: python src/Project/pipeline/stage_01_data_ingestion.py
     deps:
     - path: config/config.yaml
       hash: md5
       md5: 6286ced447f29c62da3694f1c45c0dbb
       size: 592
-    - path: src/cnnClassifier/pipeline/stage_01_data_ingestion.py
+    - path: src/Project/pipeline/stage_01_data_ingestion.py
       hash: md5
       md5: 78c36866c67927f1a2e2e6f3814c21aa
       size: 916
@@ -18,7 +18,7 @@ stages:
       size: 49247431
       nfiles: 343
   prepare_base_model:
-    cmd: python src/cnnClassifier/pipeline/stage_02_prepare_base_model.py
+    cmd: python src/Project/pipeline/stage_02_prepare_base_model.py
     deps:
     - path: config/config.yaml
       hash: md5
@@ -45,7 +45,7 @@ stages:
       size: 118054560
       nfiles: 2
   training:
-    cmd: python src/cnnClassifier/pipeline/stage_03_model_trainer.py
+    cmd: python src/Project/pipeline/stage_03_model_trainer.py
     deps:
     - path: artifacts/data_ingestion/Chest-CT-Scan-data
       hash: md5
@@ -61,7 +61,7 @@ stages:
       hash: md5
       md5: 6286ced447f29c62da3694f1c45c0dbb
       size: 592
-    - path: src/cnnClassifier/pipeline/stage_03_model_trainer.py
+    - path: src/Project/pipeline/stage_03_model_trainer.py
       hash: md5
       md5: 2471785fbf53cfe606cd3ce184619143
       size: 928
@@ -80,7 +80,7 @@ stages:
       md5: 14fefc307d472d1e74f827f6192ec871
       size: 59337520
   evaluation:
-    cmd: python src/cnnClassifier/pipeline/stage_04_model_evaluation.py
+    cmd: python src/Project/pipeline/stage_04_model_evaluation.py
     deps:
     - path: artifacts/data_ingestion/Chest-CT-Scan-data
       hash: md5
@@ -95,7 +95,7 @@ stages:
       hash: md5
       md5: 6286ced447f29c62da3694f1c45c0dbb
       size: 592
-    - path: src/cnnClassifier/pipeline/stage_04_model_evaluation.py
+    - path: src/Project/pipeline/stage_04_model_evaluation.py
       hash: md5
       md5: e5acfe1c4e9e0a3f116bebf9898cb1ee
       size: 938

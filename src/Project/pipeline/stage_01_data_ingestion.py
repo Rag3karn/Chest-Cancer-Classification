@@ -1,6 +1,6 @@
-from cnnClassifier.config.configuration import ConfigurationManager
-from cnnClassifier.components.data_ingestion import DataIngestion
-from cnnClassifier import logger
+from Project.config.configuration import ConfigurationManager
+from Project.components.data_ingestion import DataIngestion
+from Project import logger
 
 
 
